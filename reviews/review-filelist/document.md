@@ -1,3 +1,6 @@
-# ドキュメントファイル一覧
+# ドキュメント
 
-- `s:\Git\CSharpProjects\RNGNewAuraNotifier\README.md`
+以下のドキュメントファイルがプロジェクトに含まれています：
+
+- [README.md](../README.md) - プロジェクトの基本説明
+- [LICENSE](../LICENSE) - ライセンス情報
