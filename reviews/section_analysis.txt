@@ -1,0 +1,99 @@
+
+File                                                                                                                             SectionCount Sections
+----                                                                                                                             ------------ --------
+S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.github\workflows\ci.yml.md                                                        5 概要, レビュー内容, セキュリティ, パフォーマンス, 結論
+S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.github\workflows\release.yml.md                                                   5 概要, レビュー内容, セキュリティ, パフォーマンス, 結論
+S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.github\workflows\review.yml.md                                                    5 概要, レビュー内容, セキュリティ, パフォーマンス, 結論
+S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.github\review-config.yml.md                                                       5 概要, レビュー内容, セキュリティ, パフォーマンス, 結論
+S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.vscode\settings.json.md                                                           5 概要, レビュー内容, セキュリティ, パフォーマンス, 結論
+S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Aura\Aura.cs.md                                            7 概要, 良い点, 問題点, 改善案, セキュリティの考慮事項, パフォーマンスの考慮
+                                                                                                                                              事項, 総評
+S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Aura\NewAuraDetectionService.cs.md                         7 概要, 良い点, 問題点, 改善案, セキュリティの考慮事項, パフォーマンスの考慮
+                                                                                                                                              事項, 総評
+S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Config\AppConfig.cs.md                                    14 概要, 良い点, 問題点, 改善案, セキュリティの考慮事項, パフォーマンスの考慮
+                                                                                                                                              事項, 総評, 概要, 良い点, 問題点, 改善案, セキュリティの考慮事項, パフォー
+                                                                                                                                              マンスの考慮事項, 総評
+S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Config\ConfigData.cs.md                                    0 
+S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Json\JsonData.cs.md                                        6 概要, 良い点, 問題点と改善提案, セキュリティの考慮事項, パフォーマンスの考
+                                                                                                                                              慮事項, 総合評価
+S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Json\JsonUpdateService.cs.md                               6 概要, 良い点, 問題点と改善提案, セキュリティの考慮事項, パフォーマンスの考
+                                                                                                                                              慮事項, 総合評価
+S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Notification\DiscordNotificationService.cs.md              7 概要, 良い点, 問題点, 改善案, セキュリティの考慮事項, パフォーマンスの考慮
+                                                                                                                                              事項, 総評
+S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Notification\UwpNotificationService.cs.md                  7 概要, 良い点, 問題点, 改善案, セキュリティの考慮事項, パフォーマンスの考慮
+                                                                                                                                              事項, 総評
+S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Updater\GitHubReleaseService.cs.md                         6 概要, 良い点, 改善点, セキュリティの考慮事項, パフォーマンスの考慮事項, 総
+                                                                                                                                              評
+S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Updater\ReleaseInfo.cs.md                                  6 概要, 良い点, 改善点, セキュリティの考慮事項, パフォーマンスの考慮事項, 総
+                                                                                                                                              評
+S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Updater\SemanticVersion.cs.md                              6 概要, 良い点, 改善点, セキュリティの考慮事項, パフォーマンスの考慮事項, 総
+                                                                                                                                              評
+S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Updater\UpdateChecker.cs.md                                6 概要, 良い点, 改善点, セキュリティとパフォーマンス, 推奨事項, 結論
+S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\VRChat\AuthenticatedDetectionService.cs.md                 6 概要, 良い点, 問題点と改善提案, セキュリティの考慮事項, パフォーマンスの考
+                                                                                                                                              慮事項, 総合評価
+S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\VRChat\LogWatcher.cs.md                                    7 概要, 良い点, 問題点, 改善案, セキュリティの考慮事項, パフォーマンスの考慮
+                                                                                                                                              事項, 総評
+S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\VRChat\VRChatUser.cs.md                                    6 概要, 良い点, 問題点と改善提案, セキュリティの考慮事項, パフォーマンスの考
+                                                                                                                                              慮事項, 総合評価
+S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\AppConstants.cs.md                                         6 概要, 良い点, 改善点, セキュリティの考慮事項, パフォーマンスの考慮事項, 総
+                                                                                                                                              評
+S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\RNGNewAuraController.cs.md                                 7 概要, 良い点, 問題点, 改善案, セキュリティの考慮事項, パフォーマンスの考慮
+                                                                                                                                              事項, 総評
+S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Properties\PublishProfiles\Publish.pubxml.md                    5 概要, レビュー内容, セキュリティ, パフォーマンス, 結論
+S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Properties\launchSettings.json.md                               5 概要, レビュー内容, セキュリティ, パフォーマンス, 結論
+S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Properties\Resources.Designer.cs.md                             5 概要, レビュー内容, セキュリティ, パフォーマンス, 結論
+S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Properties\Resources.resx.md                                    5 概要, レビュー内容, セキュリティ, パフォーマンス, 結論
+S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Resources\AppIcon.ico.md                                        5 概要, レビュー内容, セキュリティ, パフォーマンス, 結論
+S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Resources\Auras.json.md                                         0 
+S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\UI\Settings\SettingsForm.cs.md                                  6 概要, 良い点, 問題点と改善提案, セキュリティの考慮事項, パフォーマンスの考
+                                                                                                                                              慮事項, 総合評価
+S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\UI\Settings\SettingsForm.Designer.cs.md                         5 概要, レビュー内容, セキュリティ, パフォーマンス, 結論
+S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\UI\Settings\SettingsForm.resx.md                                5 概要, レビュー内容, セキュリティ, パフォーマンス, 結論
+S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\UI\TrayIcon\TrayIcon.cs.md                                      6 概要, 良い点, 問題点と改善提案, セキュリティの考慮事項, パフォーマンスの考
+                                                                                                                                              慮事項, 総合評価
+S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Program.cs.md                                                   7 概要, 良い点, 問題点, 改善案, セキュリティの考慮事項, パフォーマンスの考慮
+                                                                                                                                              事項, 総評
+S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\RNGNewAuraNotifier.csproj.md                                    5 概要, 良い点, 改善点, 推奨される改善策, 結論
+S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier.Updater\Core\AppConstants.cs.md                                 6 概要, 良い点, 改善点, セキュリティの考慮事項, パフォーマンスの考慮事項, 総
+                                                                                                                                              評
+S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier.Updater\Core\GitHubReleaseService.cs.md                         6 概要, 良い点, 改善点, セキュリティの考慮事項, パフォーマンスの考慮事項, 総
+                                                                                                                                              評
+S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier.Updater\Core\ReleaseInfo.cs.md                                  6 概要, 良い点, 改善点, セキュリティの考慮事項, パフォーマンスの考慮事項, 総
+                                                                                                                                              評
+S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier.Updater\Core\SemanticVersion.cs.md                              6 概要, 良い点, 改善点, セキュリティの考慮事項, パフォーマンスの考慮事項, 総
+                                                                                                                                              評
+S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier.Updater\Core\UpdaterHelper.cs.md                                6 概要, 良い点, 改善点, セキュリティの考慮事項, パフォーマンスの考慮事項, 総
+                                                                                                                                              評
+S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier.Updater\Properties\PublishProfiles\Publish.pubxml.md            0 
+S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier.Updater\Program.cs.md                                           6 概要, 良い点, 問題点と改善提案, セキュリティの考慮事項, パフォーマンスの考
+                                                                                                                                              慮事項, 総合評価
+S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier.Updater\RNGNewAuraNotifier.Updater.csproj.md                    5 概要, 良い点, 改善点, 推奨される改善策, 結論
+S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.editorconfig.md                                                                   7 概要, 設定の分析, 改善提案, セキュリティ上の考慮事項, パフォーマンスへの影
+                                                                                                                                              響, 推奨事項, まとめ
+S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.gitattributes.md                                                                  7 概要, 現在の設定, 改善が必要な領域, セキュリティ上の考慮事項, パフォーマン
+                                                                                                                                              スの最適化, 改善提案の要約, まとめ
+S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.github-workflows-ci.yml.md                                                        7 概要, 現在の設定の分析, 改善提案, セキュリティ上の考慮事項, パフォーマンス
+                                                                                                                                              の最適化, 推奨事項, まとめ
+S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.github-workflows-release.yml.md                                                   7 概要, 現在の設定の分析, 改善提案, セキュリティ上の考慮事項, パフォーマンス
+                                                                                                                                              の最適化, 推奨事項, まとめ
+S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.github-workflows-review.yml.md                                                    7 概要, 現在の設定の分析, 改善提案, セキュリティ上の考慮事項, パフォーマンス
+                                                                                                                                              の最適化, 推奨事項, まとめ
+S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.gitignore.md                                                                      8 概要, 設定の分析, 推奨される追加設定, 改善提案, セキュリティ上の考慮事項,
+                                                                                                                                              パフォーマンスへの影響, 推奨事項, まとめ
+S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.vscode-settings.json.md                                                           7 概要, 現在の設定の分析, 改善提案, セキュリティに関する考慮事項, パフォーマ
+                                                                                                                                              ンスの最適化, 推奨事項, まとめ
+S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\LICENSE.md                                                                         6 概要, レビュー内容, ライセンス, セキュリティ, パフォーマンス, 結論
+S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\project.md                                                                         8 プロジェクト概要, アーキテクチャと設計, コード品質の評価, 主要なコンポーネ
+                                                                                                                                              ントの評価, セキュリティ評価, パフォーマンス評価, 保守性と拡張性の評価, ま
+                                                                                                                                              とめと総合評価
+S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\README.md.md                                                                      13 概要, 問題点, 改善案, 機能, インストール方法, 設定方法, システム要件, スク
+                                                                                                                                              リーンショット, ライセンス, 貢献, 推奨事項, セキュリティの考慮事項, コミュ
+                                                                                                                                              ニティガイドライン
+S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\renovate.json.md                                                                   5 概要, レビュー内容, セキュリティ, パフォーマンス, 結論
+S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier-RNGNewAuraNotifier.csproj.md                                    7 概要, 現在の設定の分析, 改善提案, セキュリティ上の考慮事項, パフォーマンス
+                                                                                                                                              の最適化, 推奨事項, まとめ
+S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier.sln.md                                                          7 概要, 現在の設定の分析, 改善提案, セキュリティ上の考慮事項, パフォーマンス
+                                                                                                                                              の最適化, 推奨事項, まとめ
+S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\stylecop.json.md                                                                   7 概要, 設定の分析, 改善提案, セキュリティ上の考慮事項, パフォーマンスへの影
+                                                                                                                                              響, 推奨事項, まとめ
+

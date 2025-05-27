@@ -1,0 +1,436 @@
+# RNGNewAuraNotifier プロジェクト レビューポイント一覧
+
+## 良い点一覧
+
+- **[Aura機能]** 5. **フォーマットの一貫性**: レアリティの表示フォーマットなど、ユーザー向けの表示が一貫しています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Aura\Aura.cs.md)_
+- **[Aura機能]** 1. **レコード型の採用**: C#のレコード型を使用して、値セマンティクスをもつ不変オブジェクトとして実装されています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Aura\Aura.cs.md)_
+- **[Aura機能]** 4. **適切な等価性比較**: `Equals`と`GetHashCode`を適切にオーバーライドして、IDベースの等価性比較を実装しています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Aura\Aura.cs.md)_
+- **[Aura機能]** 3. **例外処理**: `GetAura`メソッドでデシリアライズ時の例外をキャッチし、フォールバック処理を行っています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Aura\Aura.cs.md)_
+- **[Aura機能]** 2. **詳細なコメント**: XMLドキュメントコメントが充実しており、プロパティやメソッドの役割が明確です。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Aura\Aura.cs.md)_
+- **[Aura機能]** 4. **明確なコメント**: XMLドキュメントコメントが適切に記述されており、クラスとメソッドの役割が明確です。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Aura\NewAuraDetectionService.cs.md)_
+- **[Aura機能]** 2. **正規表現の生成**: .NET 7以降で導入された`GeneratedRegex`属性を使用して効率的な正規表現の生成を行っています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Aura\NewAuraDetectionService.cs.md)_
+- **[Aura機能]** 1. **単一責任の原則**: クラスは新しいAuraの検出に特化し、単一の責任を果たしています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Aura\NewAuraDetectionService.cs.md)_
+- **[Aura機能]** 5. **明示的な文化情報の指定**: `int.Parse`時に`CultureInfo.InvariantCulture`を使用して、ロケールに依存しない解析を行っています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Aura\NewAuraDetectionService.cs.md)_
+- **[Aura機能]** 3. **依存性の注入**: コンストラクタで`LogWatcher`インスタンスを受け取り、依存性を注入しています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Aura\NewAuraDetectionService.cs.md)_
+- **[GitHub設定]** - ✅ **設定項目**: レビュアー追加の有効化、アサイン（担当者）追加の無効化、およびレビュアーリストが適切に定義されています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.github\review-config.yml.md)_
+- **[GitHub設定]** - ✅ **ジョブ構成**: 単一の「build」ジョブで、すべての必要なステップが論理的に構成されています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.github\workflows\ci.yml.md)_
+- **[GitHub設定]** - ✅ **トリガー設定**: mainとmasterブランチへのプッシュおよびプルリクエスト時に実行される適切なトリガーが設定されています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.github\workflows\ci.yml.md)_
+- **[GitHub設定]** - ✅ **同時実行制御**: `concurrency` 設定により、同じブランチで複数のワークフローが同時に実行されるのを防いでいます。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.github\workflows\release.yml.md)_
+- **[GitHub設定]** - ✅ **トリガー設定**: mainとmasterブランチへのプッシュ時、または手動トリガー時に実行される設定になっています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.github\workflows\release.yml.md)_
+- **[GitHub設定]** - ✅ **トリガー設定**: プルリクエストの作成時（`opened`）と「レビュー準備完了」状態（`ready_for_review`）になったときに実行されるよう適切に設定されています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.github\workflows\review.yml.md)_
+- **[GitHub設定]** - ✅ **パーミッション設定**: 必要最小限の権限（コンテンツの読み取りとプルリクエストの書き込み）のみが付与されています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.github\workflows\review.yml.md)_
+- **[Git設定]** - その他の重要な設定がコメントアウトされたまま _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.gitattributes.md)_
+- **[Git設定]** - 自動的な改行コード正規化が有効 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.gitattributes.md)_
+- **[Git設定]** - クロスプラットフォーム開発に適した設定 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.gitattributes.md)_
+- **[Git設定]** - **⚠️ 問題点**: _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.gitattributes.md)_
+- **[Git設定]** - プロジェクト固有の設定が不足 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.gitattributes.md)_
+- **[Git設定]** - mainとmasterブランチへのプッシュとPRで実行 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.github-workflows-ci.yml.md)_
+- **[Git設定]** - タグプッシュ時のビルド設定がない _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.github-workflows-ci.yml.md)_
+- **[Git設定]** - develop ブランチなど他の重要ブランチの考慮 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.github-workflows-ci.yml.md)_
+- **[Git設定]** - **⚠️ 改善点**: _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.github-workflows-ci.yml.md)_
+- **[Git設定]** - 重要な変更に対する自動チェック _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.github-workflows-ci.yml.md)_
+- **[Git設定]** - **⚠️ 改善点**: _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.github-workflows-release.yml.md)_
+- **[Git設定]** - 同時実行の制御 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.github-workflows-release.yml.md)_
+- **[Git設定]** - 手動トリガー（workflow_dispatch）のサポート _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.github-workflows-release.yml.md)_
+- **[Git設定]** - mainとmasterブランチへのプッシュで自動実行 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.github-workflows-release.yml.md)_
+- **[Git設定]** - タグプッシュでのトリガーがない _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.github-workflows-release.yml.md)_
+- **[Git設定]** - リリースブランチの考慮がない _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.github-workflows-release.yml.md)_
+- **[Git設定]** - プルリクエストの作成時とレビュー準備時にトリガー _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.github-workflows-review.yml.md)_
+- **[Git設定]** - 通知設定がない _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.github-workflows-review.yml.md)_
+- **[Git設定]** - エラーハンドリングがない _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.github-workflows-review.yml.md)_
+- **[Git設定]** - アクションのバージョンが固定 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.github-workflows-review.yml.md)_
+- **[Git設定]** - **⚠️ 改善点**: _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.github-workflows-review.yml.md)_
+- **[Git設定]** - 設定ファイルの外部化 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.github-workflows-review.yml.md)_
+- **[Git設定]** - 適切な権限設定 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.github-workflows-review.yml.md)_
+- **[Git設定]** - クロスプラットフォーム開発ツールのファイルも考慮 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.gitignore.md)_
+- **[Git設定]** - Visual Studioの一時ファイルを網羅 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.gitignore.md)_
+- **[Git設定]** - ユーザー固有の設定ファイルを適切に除外 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.gitignore.md)_
+- **[JSON処理]** 1. **適切なエラーハンドリング**: ファイル読み込みやデシリアライズの失敗に対して適切に例外処理を行っています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Json\JsonData.cs.md)_
+- **[JSON処理]** 2. **フォールバックメカニズム**: ローカルJSONファイルが利用できない場合、組み込みリソースにフォールバックする仕組みが実装されています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Json\JsonData.cs.md)_
+- **[JSON処理]** 3. **静的メソッド設計**: データアクセスが簡単にできるよう、静的メソッドを提供しています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Json\JsonData.cs.md)_
+- **[JSON処理]** 4. **適切なドキュメンテーション**: コードにはXMLドキュメントコメントが付与されており、機能や目的が明確です。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Json\JsonData.cs.md)_
+- **[JSON処理]** 4. **バージョン比較ロジック**: 日付ベースでバージョンを比較し、更新が必要かどうかを判断する明確なロジックが実装されています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Json\JsonUpdateService.cs.md)_
+- **[JSON処理]** 3. **適切なエラーハンドリング**: JSONの解析エラーを適切に処理しています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Json\JsonUpdateService.cs.md)_
+- **[JSON処理]** 1. **コンストラクタインジェクション**: リポジトリの所有者名とリポジトリ名をコンストラクタで受け取り、柔軟性を高めています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Json\JsonUpdateService.cs.md)_
+- **[JSON処理]** 2. **プライマリコンストラクタ記法**: C#の新しい機能であるプライマリコンストラクタを使用しており、コードが簡潔になっています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Json\JsonUpdateService.cs.md)_
+- **[VRChat連携]** 1. **イベントベースの設計**: ユーザーログイン検出をイベントとして通知する設計は、疎結合性を促進し、拡張性を高めています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\VRChat\AuthenticatedDetectionService.cs.md)_
+- **[VRChat連携]** 2. **依存性の注入**: `LogWatcher`をコンストラクタで受け取っており、依存性の注入の原則に従っています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\VRChat\AuthenticatedDetectionService.cs.md)_
+- **[VRChat連携]** 3. **正規表現の効率的な使用**: `GeneratedRegex`属性を使用して、コンパイル時に正規表現を最適化しています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\VRChat\AuthenticatedDetectionService.cs.md)_
+- **[VRChat連携]** 4. **適切なドキュメンテーション**: メソッドや変数にXMLドキュメントコメントが付与されており、コードの理解が容易です。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\VRChat\AuthenticatedDetectionService.cs.md)_
+- **[VRChat連携]** 5. **プレースホルダの使用**: 正規表現で名前付きキャプチャグループを使用しており、コードの可読性が高まっています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\VRChat\AuthenticatedDetectionService.cs.md)_
+- **[VRChat連携]** 4. **柔軟性**: ログディレクトリとファイルフィルタを外部から指定できるようになっています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\VRChat\LogWatcher.cs.md)_
+- **[VRChat連携]** 5. **エラーハンドリング**: ログファイル処理中の例外をキャッチして、処理を継続できるようになっています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\VRChat\LogWatcher.cs.md)_
+- **[VRChat連携]** 3. **リソース管理**: `IDisposable`インターフェースを実装し、リソースの解放を行っています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\VRChat\LogWatcher.cs.md)_
+- **[VRChat連携]** 1. **非同期処理**: ログファイルの監視を非同期で行っており、メインスレッドをブロックしない設計になっています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\VRChat\LogWatcher.cs.md)_
+- **[VRChat連携]** 2. **キャンセルトークン**: 監視処理の停止に`CancellationTokenSource`を適切に使用しています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\VRChat\LogWatcher.cs.md)_
+- **[VRChat連携]** 4. **適切なドキュメンテーション**: プロパティや使用例を含む、明確なXMLドキュメントコメントが記述されています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\VRChat\VRChatUser.cs.md)_
+- **[VRChat連携]** 1. **レコード型の使用**: 値の等価性を自動的に提供するC#のrecord型を適切に使用しています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\VRChat\VRChatUser.cs.md)_
+- **[VRChat連携]** 2. **プロパティの初期化専用設計**: プロパティが`init`キーワードで宣言されており、オブジェクト作成後の変更を防いでいます。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\VRChat\VRChatUser.cs.md)_
+- **[VRChat連携]** 3. **必須プロパティ**: `required`キーワードを使用して、必須プロパティを明示しています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\VRChat\VRChatUser.cs.md)_
+- **[VRChat連携]** 5. **カスタム等価性とハッシュコード**: ユーザーIDに基づいた等価性比較とハッシュコード生成をオーバーライドしています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\VRChat\VRChatUser.cs.md)_
+- **[VS Code設定]** - ✅ **設定の整理**: 設定は「基本設定」「インデント設定」「ファイルタイプ別のインデント設定」「C# 関連の設定」「その他の設定」のセクションに分かれており、見やすい構成になっています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.vscode\settings.json.md)_
+- **[アップデーター]** 2. **適切なドキュメント**: 各定数にXMLドキュメントコメントが付与されており、使用目的が明確です。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier.Updater\Core\AppConstants.cs.md)_
+- **[アップデーター]** 3. **動的な値の取得**: `AppName`や`AppVersionString`などの値をリフレクションを使用して動的に取得しており、コードと実際のアセンブリの間で不一致が発生するリスクを低減しています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier.Updater\Core\AppConstants.cs.md)_
+- **[アップデーター]** 1. **関心の分離**: アプリケーション全体で使用される定数を一箇所に集中させることで、保守性が向上しています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier.Updater\Core\AppConstants.cs.md)_
+- **[アップデーター]** 4. **フォールバック処理**: nullの場合のフォールバック処理が適切に実装されています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier.Updater\Core\AppConstants.cs.md)_
+- **[アップデーター]** 2. **非同期処理の適切な実装**: 非同期メソッドを使用して、I/O操作をブロッキングせずに実行しています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier.Updater\Core\GitHubReleaseService.cs.md)_
+- **[アップデーター]** 3. **進捗状況の表示**: ダウンロード中の進捗状況をコンソールに表示しています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier.Updater\Core\GitHubReleaseService.cs.md)_
+- **[アップデーター]** 5. **一時ファイルの使用**: ダウンロードしたファイルを一時ファイルに保存し、後処理を容易にしています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier.Updater\Core\GitHubReleaseService.cs.md)_
+- **[アップデーター]** 6. **ConfigureAwait(false)の使用**: UI スレッドのブロックを避けるために適切に`ConfigureAwait(false)`を使用しています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier.Updater\Core\GitHubReleaseService.cs.md)_
+- **[アップデーター]** 4. **ユーザーエージェントの設定**: GitHub APIにアクセスする際に適切なユーザーエージェントを設定しています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier.Updater\Core\GitHubReleaseService.cs.md)_
+- **[アップデーター]** 1. **適切なリソース管理**: `IDisposable` インターフェースを実装し、`HttpClient` リソースを適切に解放しています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier.Updater\Core\GitHubReleaseService.cs.md)_
+- **[アップデーター]** 5. **イミュータブル設計**: プロパティはget-onlyで、コンストラクタでのみ値が設定されるイミュータブルな設計になっています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier.Updater\Core\ReleaseInfo.cs.md)_
+- **[アップデーター]** 1. **簡潔なコード**: クラスは非常に簡潔で、必要な情報のみを含んでいます。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier.Updater\Core\ReleaseInfo.cs.md)_
+- **[アップデーター]** 2. **プライマリコンストラクタの使用**: C# 12の新機能であるプライマリコンストラクタを適切に使用しています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier.Updater\Core\ReleaseInfo.cs.md)_
+- **[アップデーター]** 3. **セマンティックバージョンの変換**: タグ名を直接格納するのではなく、`SemanticVersion`型に変換して格納しており、バージョン比較が容易になっています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier.Updater\Core\ReleaseInfo.cs.md)_
+- **[アップデーター]** 4. **適切なドキュメント**: XMLドキュメントコメントが適切に記述されています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier.Updater\Core\ReleaseInfo.cs.md)_
+- **[アップデーター]** 5. **適切なXMLドキュメント**: メソッドやプロパティに適切なXMLドキュメントコメントが付与されています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier.Updater\Core\SemanticVersion.cs.md)_
+- **[アップデーター]** 6. **文化不変の数値解析**: `int.Parse`に`CultureInfo.InvariantCulture`を使用しており、文化に依存しない一貫した数値解析を行っています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier.Updater\Core\SemanticVersion.cs.md)_
+- **[アップデーター]** 4. **イミュータブル設計**: プロパティがget-onlyで、コンストラクタでのみ値が設定されるイミュータブルな設計になっています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier.Updater\Core\SemanticVersion.cs.md)_
+- **[アップデーター]** 3. **演算子のオーバーロード**: `>` と `<` 演算子がオーバーロードされており、直感的な比較が可能です。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier.Updater\Core\SemanticVersion.cs.md)_
+- **[アップデーター]** 1. **明確な責任**: セマンティックバージョンの表現と比較という明確な責任を持ったクラスになっています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier.Updater\Core\SemanticVersion.cs.md)_
+- **[アップデーター]** 2. **適切なインターフェース実装**: `IComparable<SemanticVersion>` インターフェースを実装しており、順序付けが可能です。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier.Updater\Core\SemanticVersion.cs.md)_
+- **[アップデーター]** 5. **段階的なプロセス終了**: プロセスを終了する際に、まず正常終了を試み、それが失敗した場合にのみ強制終了を行う段階的なアプローチを採用しています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier.Updater\Core\UpdaterHelper.cs.md)_
+- **[アップデーター]** 1. **単一責任の原則**: 各メソッドは明確な単一の責任を持っています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier.Updater\Core\UpdaterHelper.cs.md)_
+- **[アップデーター]** 2. **適切な例外処理**: プロセスの終了処理では適切に例外をキャッチし、エラーメッセージを出力しています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier.Updater\Core\UpdaterHelper.cs.md)_
+- **[アップデーター]** 3. **安全なZIPファイル展開**: ディレクトリトラバーサル攻撃を防ぐためのパスの検証が実装されています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier.Updater\Core\UpdaterHelper.cs.md)_
+- **[アップデーター]** 4. **リソース管理**: `using`ステートメントを使用して、ZIPアーカイブのリソースが適切に解放されることを保証しています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier.Updater\Core\UpdaterHelper.cs.md)_
+- **[アップデーター]** 2. **コマンドライン引数の解析**: 必要なパラメータを明確に定義し、引数を適切に解析しています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier.Updater\Program.cs.md)_
+- **[アップデーター]** 6. **適切なドキュメンテーション**: メソッドや変数にXMLドキュメントコメントが付与されており、コードの理解が容易です。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier.Updater\Program.cs.md)_
+- **[アップデーター]** 5. **プロセス管理**: 実行中のアプリケーションを適切に終了させてから更新を行うように配慮されています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier.Updater\Program.cs.md)_
+- **[アップデーター]** 4. **アップデートスキップモード**: エラーが発生した場合、アップデートをスキップしてアプリケーションを起動するフォールバックメカニズムが実装されています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier.Updater\Program.cs.md)_
+- **[アップデーター]** 3. **エラーハンドリング**: 更新プロセス全体をtry-catchブロックでラップし、エラーが発生した場合でもユーザーにフィードバックを提供しています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier.Updater\Program.cs.md)_
+- **[アップデーター]** 1. **自己複製メカニズム**: Updaterが一時フォルダに自身をコピーして実行する仕組みは、更新中にUpdater自体が上書きされるのを防ぐ良い設計です。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier.Updater\Program.cs.md)_
+- **[アップデーター]** 1. **自己完結型アプリケーション**: `SelfContained`と`RuntimeIdentifier`が設定されており、.NET ランタイムのインストールが不要な自己完結型アプリケーションとして構成されています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier.Updater\RNGNewAuraNotifier.Updater.csproj.md)_
+- **[アップデーター]** 2. **最適化された配布設定**: 単一ファイル発行(`PublishSingleFile`)やデバッグ情報の埋め込み(`DebugType`)など、配布に適した設定がされています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier.Updater\RNGNewAuraNotifier.Updater.csproj.md)_
+- **[アップデーター]** 3. **明確なターゲットプラットフォーム**: Windows 10バージョン17763.0以上を対象としており、動作環境が明確です。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier.Updater\RNGNewAuraNotifier.Updater.csproj.md)_
+- **[アップデーター]** 4. **コードスタイル分析**: StyleCop.Analyzersを使用してコードスタイルを統一しています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier.Updater\RNGNewAuraNotifier.Updater.csproj.md)_
+- **[アプリケーション設定]** - ✅ **明確な目的**: 各設定項目が明確な目的を持っており、適切に構成されています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier.Updater\Properties\PublishProfiles\Publish.pubxml.md)_
+- **[アプリケーション設定]** - ✅ **プロファイル定義**: `RNGNewAuraNotifier` という単一のプロファイルが定義されています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Properties\launchSettings.json.md)_
+- **[アプリケーション設定]** - ✅ **明確な目的**: 各設定項目が明確な目的を持っており、適切に構成されています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Properties\PublishProfiles\Publish.pubxml.md)_
+- **[アプリケーション設定]** - ✅ **リソースアクセス**: 埋め込みリソースへのアクセスを提供する静的プロパティが適切に定義されています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Properties\Resources.Designer.cs.md)_
+- **[アプリケーション設定]** - ✅ **クラス設計**: `Resources` クラスは適切にデザインされており、リソースマネージャとカルチャ情報の管理に必要なプロパティを提供しています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Properties\Resources.Designer.cs.md)_
+- **[アプリケーション設定]** - ✅ **リソース定義**: 適切にリソースが定義されており、各リソースのタイプと場所が明確に指定されています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Properties\Resources.resx.md)_
+- **[エディタ設定]** - ルート設定ファイルとして指定 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.editorconfig.md)_
+- **[エディタ設定]** - 一貫したインデントスタイル（スペース） _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.editorconfig.md)_
+- **[エディタ設定]** - 明確なインデントサイズ（4スペース） _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.editorconfig.md)_
+- **[エディタ設定]** - 改行コードの統一（CRLF） _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.editorconfig.md)_
+- **[エディタ設定]** - ファイル末尾の改行を強制 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.editorconfig.md)_
+- **[エディタ設定]** - 行末の空白を自動削除 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.editorconfig.md)_
+- **[エディタ設定]** - UTF-8エンコーディングの強制 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.editorconfig.md)_
+- **[コードスタイル]** - **⚠️ 検討点**: _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\stylecop.json.md)_
+- **[コードスタイル]** - XMLヘッダーが無効化されている（`xmlHeader: false`） _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\stylecop.json.md)_
+- **[コードスタイル]** - プライベート要素のドキュメント化が必須（オーバーヘッドの可能性） _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\stylecop.json.md)_
+- **[コードスタイル]** - すべての要素（インターフェース、公開要素、内部要素、プライベート要素）のドキュメント化を要求 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\stylecop.json.md)_
+- **[コードスタイル]** - ファイル命名規則がメタデータベース _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\stylecop.json.md)_
+- **[その他]** - エンコーディングとの改行コードの明示的な指定 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.vscode-settings.json.md)_
+- **[その他]** - 余分な空白の自動削除 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.vscode-settings.json.md)_
+- **[その他]** - ファイル末尾の改行を統一 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.vscode-settings.json.md)_
+- **[その他]** - .editorconfigと整合性のある設定 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.vscode-settings.json.md)_
+- **[その他]** - プラットフォーム固有の最適化設定の欠如 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier-RNGNewAuraNotifier.csproj.md)_
+- **[その他]** - 最新の.NET 9.0ターゲット _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier-RNGNewAuraNotifier.csproj.md)_
+- **[その他]** - Nullableリファレンス型の有効化 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier-RNGNewAuraNotifier.csproj.md)_
+- **[その他]** - 特定のWindowsバージョンへの依存 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier-RNGNewAuraNotifier.csproj.md)_
+- **[その他]** - **⚠️ 改善点**: _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier-RNGNewAuraNotifier.csproj.md)_
+- **[その他]** - 暗黙的using の有効化 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier-RNGNewAuraNotifier.csproj.md)_
+- **[その他]** - 明確なOS要件 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier-RNGNewAuraNotifier.csproj.md)_
+- **[その他]** - 最小バージョン要件の明示 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier.sln.md)_
+- **[その他]** - バージョン情報の明確な記載 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier.sln.md)_
+- **[その他]** - 最新のVisual Studio 2022形式を使用 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier.sln.md)_
+- **[その他]** 1. **関心の分離**: アプリケーション全体で使用される定数を一箇所に集中させることで、保守性が向上しています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\AppConstants.cs.md)_
+- **[その他]** 2. **適切なドキュメント**: 各定数にXMLドキュメントコメントが付与されており、使用目的が明確です。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\AppConstants.cs.md)_
+- **[その他]** 3. **動的な値の取得**: `AppName`や`AppVersionString`などの値をリフレクションを使用して動的に取得しており、コードと実際のアセンブリの間で不一致が発生するリスクを低減しています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\AppConstants.cs.md)_
+- **[その他]** 4. **フォールバック処理**: nullの場合のフォールバック処理が適切に実装されています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\AppConstants.cs.md)_
+- **[その他]** 1. **単一責任の原則**: コントローラーとしての役割に集中し、ログの監視・検出・通知の調整を行っています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\RNGNewAuraController.cs.md)_
+- **[その他]** 4. **リソース管理**: `IDisposable`インターフェースを実装し、リソースの解放を適切に行っています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\RNGNewAuraController.cs.md)_
+- **[その他]** 3. **依存性の注入**: コンストラクタでログディレクトリのパスを受け取り、外部から設定可能にしています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\RNGNewAuraController.cs.md)_
+- **[その他]** 2. **適切なコメント**: XMLドキュメントコメントが適切に記述されており、メソッドの役割や引数が明確です。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\RNGNewAuraController.cs.md)_
+- **[その他]** 4. **コード構造**: メソッドが適切に分割されており、単一責任の原則を概ね守っています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Program.cs.md)_
+- **[その他]** 5. **デバッグサポート**: デバッグコンソールのサポートが実装されています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Program.cs.md)_
+- **[その他]** 3. **リソース管理**: `ApplicationExit`イベントで適切にリソースを解放しています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Program.cs.md)_
+- **[その他]** 2. **例外処理**: アプリケーション全体の未処理例外をキャッチする例外ハンドラが適切に登録されています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Program.cs.md)_
+- **[その他]** 1. **適切なコメント**: XMLドキュメントコメントが適切に書かれており、各メソッドの役割や引数、戻り値が明確に記述されています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Program.cs.md)_
+- **[その他]** 2. **Nullableの有効化**: Nullableリファレンス型を有効にして、NULLに関する潜在的な問題を防止しています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\RNGNewAuraNotifier.csproj.md)_
+- **[その他]** 1. **最新の技術スタック**: .NET 9.0を使用しており、最新の技術スタックが採用されています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\RNGNewAuraNotifier.csproj.md)_
+- **[その他]** 4. **コード分析ツール**: StyleCop.Analyzersを使用してコードスタイルを統一しています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\RNGNewAuraNotifier.csproj.md)_
+- **[その他]** 3. **発行設定の最適化**: 単一ファイル発行や埋め込みデバッグ情報など、配布に適した設定がされています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\RNGNewAuraNotifier.csproj.md)_
+- **[ユーザーインターフェース]** 5. **適切なエラーハンドリング**: 設定保存時の例外をキャッチし、ユーザーにエラーメッセージを表示しています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\UI\Settings\SettingsForm.cs.md)_
+- **[ユーザーインターフェース]** 4. **リソース解放**: フォーム閉鎖時にタイマーリソースを適切に解放しています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\UI\Settings\SettingsForm.cs.md)_
+- **[ユーザーインターフェース]** 3. **変更検出と保存確認**: フォームを閉じる際に、未保存の変更がある場合はユーザーに保存するかどうかを確認するダイアログを表示しています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\UI\Settings\SettingsForm.cs.md)_
+- **[ユーザーインターフェース]** 2. **設定の適切な読み込みと保存**: フォームロード時に設定を読み込み、保存ボタンクリック時に設定を保存する基本的な流れが実装されています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\UI\Settings\SettingsForm.cs.md)_
+- **[ユーザーインターフェース]** 1. **タイマーを使用した監視情報の更新**: 1秒ごとにタイマーを使用して監視対象ファイルパスを更新しており、ユーザーに最新情報を提供しています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\UI\Settings\SettingsForm.cs.md)_
+- **[ユーザーインターフェース]** - ✅ **リソース管理**: コンポーネントの破棄が `Dispose` メソッドで適切に処理されています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\UI\Settings\SettingsForm.Designer.cs.md)_
+- **[ユーザーインターフェース]** - ✅ **自動生成コード**: Windows Forms Designer によって生成されるコードは、明確にマークされた領域内に配置されています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\UI\Settings\SettingsForm.Designer.cs.md)_
+- **[ユーザーインターフェース]** - ✅ **構造整理**: XMLの構造は明確で、標準的なレイアウトに従っています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\UI\Settings\SettingsForm.resx.md)_
+- **[ユーザーインターフェース]** 2. **リソース解放**: `Dispose`メソッドを適切にオーバーライドし、マネージリソースとアンマネージリソースの解放を行っています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\UI\TrayIcon\TrayIcon.cs.md)_
+- **[ユーザーインターフェース]** 3. **ユーザーインターフェースの一貫性**: コンテキストメニューの実装や左クリックで設定画面を表示するなど、一般的なシステムトレイアプリケーションの慣習に従っています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\UI\TrayIcon\TrayIcon.cs.md)_
+- **[ユーザーインターフェース]** 5. **適切なドキュメンテーション**: メソッドや変数にXMLドキュメントコメントが付与されており、コードの理解が容易です。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\UI\TrayIcon\TrayIcon.cs.md)_
+- **[ユーザーインターフェース]** 1. **適切な継承**: `ApplicationContext`を継承しており、Windows Formsアプリケーションのライフサイクル管理に適しています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\UI\TrayIcon\TrayIcon.cs.md)_
+- **[ユーザーインターフェース]** 4. **フォームの再利用**: 設定フォームがすでに開いている場合は新しいインスタンスを作成せず、既存のものをフォーカスする実装になっています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\UI\TrayIcon\TrayIcon.cs.md)_
+- **[ライセンス]** - ✅ **標準的な形式**: ライセンスは標準的な形式で記述されており、法的な明確さを提供しています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\LICENSE.md)_
+- **[ライセンス]** - ✅ **権利と責任の明示**: 著作権所有者、利用者の権利、免責事項などが適切に明示されています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\LICENSE.md)_
+- **[リソース]** - ✅ **デザイン**: アプリケーションの目的や機能を適切に表現するデザインになっています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Resources\AppIcon.ico.md)_
+- **[リソース]** - ✅ **表示サイズ**: 複数の解像度（一般的には16x16, 32x32, 48x48, 256x256ピクセルなど）を含んでおり、様々な表示コンテキストで適切に表示されます。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Resources\AppIcon.ico.md)_
+- **[リソース]** - ✅ **バージョン管理**: `Version` フィールドでデータのバージョンを管理しており、良い実践です。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Resources\Auras.json.md)_
+- **[リソース]** - ✅ **データ形式**: 各 Aura エントリは一貫した形式で定義されています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Resources\Auras.json.md)_
+- **[依存関係管理]** - ✅ **拡張設定**: `github>book000/templates//renovate/base-public` という共有設定を参照しています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\renovate.json.md)_
+- **[更新機能]** 1. **適切なリソース管理**: `IDisposable` インターフェースを実装し、`HttpClient` リソースを適切に解放しています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Updater\GitHubReleaseService.cs.md)_
+- **[更新機能]** 2. **非同期処理の適切な実装**: 非同期メソッドを使用して、I/O操作をブロッキングせずに実行しています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Updater\GitHubReleaseService.cs.md)_
+- **[更新機能]** 3. **ユーザーエージェントの設定**: GitHub APIにアクセスする際に適切なユーザーエージェントを設定しています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Updater\GitHubReleaseService.cs.md)_
+- **[更新機能]** 4. **ConfigureAwait(false)の使用**: UI スレッドのブロックを避けるために適切に`ConfigureAwait(false)`を使用しています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Updater\GitHubReleaseService.cs.md)_
+- **[更新機能]** 5. **コード構造**: メソッドは短く、単一の責任を持つように設計されています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Updater\GitHubReleaseService.cs.md)_
+- **[更新機能]** 1. **簡潔なコード**: クラスは非常に簡潔で、必要な情報のみを含んでいます。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Updater\ReleaseInfo.cs.md)_
+- **[更新機能]** 2. **プライマリコンストラクタの使用**: C# 12の新機能であるプライマリコンストラクタを適切に使用しています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Updater\ReleaseInfo.cs.md)_
+- **[更新機能]** 3. **セマンティックバージョンの変換**: タグ名を直接格納するのではなく、`SemanticVersion`型に変換して格納しており、バージョン比較が容易になっています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Updater\ReleaseInfo.cs.md)_
+- **[更新機能]** 5. **イミュータブル設計**: プロパティはget-onlyで、コンストラクタでのみ値が設定されるイミュータブルな設計になっています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Updater\ReleaseInfo.cs.md)_
+- **[更新機能]** 4. **適切なドキュメント**: XMLドキュメントコメントが適切に記述されています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Updater\ReleaseInfo.cs.md)_
+- **[更新機能]** 5. **適切なXMLドキュメント**: メソッドやプロパティに適切なXMLドキュメントコメントが付与されています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Updater\SemanticVersion.cs.md)_
+- **[更新機能]** 4. **イミュータブル設計**: プロパティがget-onlyで、コンストラクタでのみ値が設定されるイミュータブルな設計になっています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Updater\SemanticVersion.cs.md)_
+- **[更新機能]** 3. **演算子のオーバーロード**: `>` と `<` 演算子がオーバーロードされており、直感的な比較が可能です。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Updater\SemanticVersion.cs.md)_
+- **[更新機能]** 2. **適切なインターフェース実装**: `IComparable<SemanticVersion>` インターフェースを実装しており、順序付けが可能です。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Updater\SemanticVersion.cs.md)_
+- **[更新機能]** 1. **明確な責任**: セマンティックバージョンの表現と比較という明確な責任を持ったクラスになっています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Updater\SemanticVersion.cs.md)_
+- **[更新機能]** 6. **文化不変の数値解析**: `int.Parse`に`CultureInfo.InvariantCulture`を使用しており、文化に依存しない一貫した数値解析を行っています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Updater\SemanticVersion.cs.md)_
+- **[更新機能]** 1. **明確な責任分担**: アップデートの確認と実行という明確な責任を持っています _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Updater\UpdateChecker.cs.md)_
+- **[更新機能]** 2. **例外処理**: 様々な種類の例外に対して適切に処理し、エラーメッセージをログに出力しています _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Updater\UpdateChecker.cs.md)_
+- **[更新機能]** 3. **非同期処理**: `async/await`パターンを使用して適切に非同期処理を実装しています _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Updater\UpdateChecker.cs.md)_
+- **[更新機能]** 4. **バージョン比較**: `SemanticVersion`クラスを使用してバージョン比較を適切に行っています _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Updater\UpdateChecker.cs.md)_
+- **[更新機能]** 5. **コードの可読性**: メソッド名や変数名が明確で、コードの意図が理解しやすいです _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Updater\UpdateChecker.cs.md)_
+- **[構成管理]** 1. **設定の永続化**: 設定がJSON形式でファイルに保存されており、アプリケーションの再起動後も設定が維持されます。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Config\AppConfig.cs.md)_
+- **[構成管理]** 2. **並行アクセスの考慮**: `Lock`クラスを使用して、複数スレッドからの同時アクセスを防止しています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Config\AppConfig.cs.md)_
+- **[構成管理]** 4. **デフォルト値**: 設定が空の場合にデフォルト値が使用されるようになっています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Config\AppConfig.cs.md)_
+- **[構成管理]** 5. **JSONの整形**: 保存されるJSONファイルがインデントされ、人間が読みやすい形式になっています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Config\AppConfig.cs.md)_
+- **[構成管理]** 3. **バリデーション**: 設定値の設定時に基本的なバリデーションが行われています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Config\AppConfig.cs.md)_
+- **[構成管理]** - ✅ **JSON属性**: `JsonPropertyName` 属性を使用して、JSONシリアライズ時のプロパティ名を適切に指定しています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Config\ConfigData.cs.md)_
+- **[構成管理]** - ✅ **XML ドキュメント**: クラスとプロパティに適切なXMLドキュメントコメントが付与されています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Config\ConfigData.cs.md)_
+- **[通知機能]** 5. **WebhookのURL設定確認**: WebhookのURLが設定されていない場合は、通知を送信せずに静かに終了します。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Notification\DiscordNotificationService.cs.md)_
+- **[通知機能]** 4. **カスタマイズ可能な通知**: フィールドやユーザー情報を通知に含めることができ、柔軟性があります。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Notification\DiscordNotificationService.cs.md)_
+- **[通知機能]** 3. **適切なリソース管理**: `using`ステートメントで`DiscordWebhookClient`を適切に破棄しています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Notification\DiscordNotificationService.cs.md)_
+- **[通知機能]** 2. **適切な非同期処理**: `async/await`パターンを使用して非同期処理が実装されています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Notification\DiscordNotificationService.cs.md)_
+- **[通知機能]** 1. **シンプルなインターフェース**: タイトル、フィールド、ユーザー情報だけで通知を送信できるシンプルなインターフェースが提供されています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Notification\DiscordNotificationService.cs.md)_
+- **[通知機能]** 4. **静的クラスの適切な使用**: 状態を持たない通知サービスとして静的クラスを使用しているのは適切です。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Notification\UwpNotificationService.cs.md)_
+- **[通知機能]** 3. **適切なコメント**: XMLドキュメントコメントが適切に記述されており、メソッドの役割が明確です。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Notification\UwpNotificationService.cs.md)_
+- **[通知機能]** 2. **適切な抽象化**: Windows Toast通知の詳細を隠蔽し、タイトルとメッセージだけで通知を表示できる抽象化が実現されています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Notification\UwpNotificationService.cs.md)_
+- **[通知機能]** 1. **シンプルなインターフェース**: 通知を表示するためのシンプルで使いやすいインターフェースが提供されています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Notification\UwpNotificationService.cs.md)_
+
+## 問題点一覧
+
+- **[Aura機能]** 6. **ハードコードされたティア判定ロジック**: ティアの説明がコメントにハードコードされており、実際の判定ロジックがありません。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Aura\Aura.cs.md)_
+- **[Aura機能]** 5. **GetNameTextの戻り値がnull許容**: `GetNameText`メソッドの戻り値が`string?`になっており、呼び出し側でnullチェックが必要です。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Aura\Aura.cs.md)_
+- **[Aura機能]** 4. **Recordの機能不足**: Recordを使用していますが、`Equals`を手動でオーバーライドしています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Aura\Aura.cs.md)_
+- **[Aura機能]** 3. **バリデーション不足**: コンストラクタでパラメータのバリデーションが行われていません。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Aura\Aura.cs.md)_
+- **[Aura機能]** 2. **Null許容の不適切な使用**: `Name`プロパティがnull許容で、`GetNameText`メソッドでnullチェックが不十分です。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Aura\Aura.cs.md)_
+- **[Aura機能]** 1. **静的メソッドの依存**: `GetAura`メソッドが`JsonData`クラスに静的に依存しており、テスト容易性と拡張性が低下しています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Aura\Aura.cs.md)_
+- **[Aura機能]** 6. **単体テスト容易性の低さ**: `AuraLogRegex`が静的メソッドであり、モック化が難しいため、単体テストが困難です。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Aura\NewAuraDetectionService.cs.md)_
+- **[Aura機能]** 5. **正規表現のメンテナンス性**: 正規表現が複雑で、将来的なログ形式の変更に対応しづらい可能性があります。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Aura\NewAuraDetectionService.cs.md)_
+- **[Aura機能]** 4. **ログ出力の過剰**: すべてのログ行に対して成功/失敗のログを出力しており、大量のログが生成される可能性があります。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Aura\NewAuraDetectionService.cs.md)_
+- **[Aura機能]** 3. **例外処理の不足**: `int.Parse`で例外が発生する可能性がありますが、それに対する処理がありません。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Aura\NewAuraDetectionService.cs.md)_
+- **[Aura機能]** 2. **リソース管理の欠如**: `IDisposable`インターフェースが実装されておらず、イベントハンドラの解除が行われていません。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Aura\NewAuraDetectionService.cs.md)_
+- **[Aura機能]** 1. **デフォルトイベントハンドラの実装**: `OnDetected`イベントにデフォルトの空実装があります。これは不要であり、潜在的にnull参照の問題を隠してしまう可能性があります。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Aura\NewAuraDetectionService.cs.md)_
+- **[Git設定]** - その他の重要な設定がコメントアウトされたまま _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.gitattributes.md)_
+- **[Git設定]** - プロジェクト固有の設定が不足 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.gitattributes.md)_
+- **[その他]** 2. **エラーハンドリングの限定**: Discord通知処理でのエラーはログに出力されるだけで、ユーザーへのフィードバックがありません。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\RNGNewAuraController.cs.md)_
+- **[その他]** 3. **`_vrchatUser`の不十分な初期化チェック**: Discord通知時に`_vrchatUser`がnullの場合の処理が明確ではありません。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\RNGNewAuraController.cs.md)_
+- **[その他]** 4. **イベントの解除がない**: `Start`メソッドでイベントハンドラを登録していますが、`Dispose`メソッドでの解除がありません。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\RNGNewAuraController.cs.md)_
+- **[その他]** 5. **フォールバック処理の重複**: コンストラクタ内でのログディレクトリのフォールバック処理が冗長です。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\RNGNewAuraController.cs.md)_
+- **[その他]** 6. **通知条件の硬直性**: Tier 5のAuraを通知しない条件がハードコードされており、設定から変更できません。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\RNGNewAuraController.cs.md)_
+- **[その他]** 1. **同期的な通知処理**: Discord通知が`Task.Run(...).Wait()`で同期的に行われており、UIスレッドをブロックする可能性があります。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\RNGNewAuraController.cs.md)_
+- **[その他]** 1. **同期的なアップデートチェック**: メインスレッドで`Task.Run(...).Wait()`を使用しているため、UI応答性に影響を与える可能性があります。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Program.cs.md)_
+- **[その他]** 2. **エラー処理の不足**: `UpdateCheck`メソッド内の非同期処理で例外が発生した場合の処理が不十分です。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Program.cs.md)_
+- **[その他]** 4. **資源の手動管理**: `_controller`のディスポーズが手動で行われており、`using`パターンが使用されていません。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Program.cs.md)_
+- **[その他]** 5. **クラウド呼び出しの同期待機**: `UpdateCheck`メソッド内でネットワーク呼び出しを同期的に待機しているため、起動時間が長くなる可能性があります。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Program.cs.md)_
+- **[その他]** 6. **UIスレッドでのファイル操作**: ログディレクトリの確認やリセットが直接UIスレッドで行われています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Program.cs.md)_
+- **[その他]** 3. **ハードコードされたメッセージ**: エラーメッセージや通知テキストがハードコードされており、国際化に対応していません。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Program.cs.md)_
+- **[ドキュメント]** 4. **スクリーンショットの欠如**: アプリケーションの実際の表示や動作を示すスクリーンショットがありません。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\README.md.md)_
+- **[ドキュメント]** 3. **多言語対応の欠如**: 英語のみの説明で、日本語など他の言語でのサポートが考慮されていません。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\README.md.md)_
+- **[ドキュメント]** 2. **技術的な詳細の欠如**: 必要なシステム要件、依存関係、ライセンス情報などが記載されていません。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\README.md.md)_
+- **[ドキュメント]** 1. **情報の不足**: アプリケーションの概要は説明されていますが、使用方法、インストール手順、設定方法などの重要な情報がありません。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\README.md.md)_
+- **[構成管理]** 6. **ハードコードされたファイルパス**: 設定ファイルのパスがハードコードされており、テスト時や特殊な環境での柔軟性に欠けます。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Config\AppConfig.cs.md)_
+- **[構成管理]** 7. **不完全なURL検証**: Discord WebhookのURLバリデーションが単純な前方一致のみで、完全なURL検証ではありません。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Config\AppConfig.cs.md)_
+- **[構成管理]** 5. **設定変更通知の欠如**: 設定が変更されたときに通知するメカニズムがありません。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Config\AppConfig.cs.md)_
+- **[構成管理]** 1. **静的クラスの設計**: 設定管理が静的クラスとして実装されており、テスト容易性と柔軟性が低下しています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Config\AppConfig.cs.md)_
+- **[構成管理]** 3. **例外処理の不足**: `Load()`メソッドでJSON読み込み時の例外処理が不十分です。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Config\AppConfig.cs.md)_
+- **[構成管理]** 2. **毎回の設定読み込み**: プロパティの取得時に毎回`Load()`メソッドが呼ばれており、パフォーマンスに影響する可能性があります。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Config\AppConfig.cs.md)_
+- **[構成管理]** 4. **`Lock`クラスの実装が不明**: `Lock`クラスの実装が見当たらず、同期処理の適切性を評価できません。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Config\AppConfig.cs.md)_
+- **[通知機能]** 1. **エラー処理の欠如**: Discord APIへのリクエスト時に発生する可能性のある例外に対する処理がありません。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Notification\DiscordNotificationService.cs.md)_
+- **[通知機能]** 2. **静的依存関係**: `AppConfig`クラスに静的に依存しており、テスト容易性が低下しています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Notification\DiscordNotificationService.cs.md)_
+- **[通知機能]** 3. **設定の都度読み込み**: `AppConfig.DiscordWebhookUrl`を毎回読み込んでおり、パフォーマンスに影響する可能性があります。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Notification\DiscordNotificationService.cs.md)_
+- **[通知機能]** 4. **ハードコードされた色**: 通知の色が緑色にハードコードされており、カスタマイズできません。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Notification\DiscordNotificationService.cs.md)_
+- **[通知機能]** 5. **テスト容易性の低さ**: 静的クラスであるため、テスト時にモック化が困難です。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Notification\DiscordNotificationService.cs.md)_
+- **[通知機能]** 6. **Webhookクライアントの毎回生成**: 通知のたびに新しい`DiscordWebhookClient`インスタンスを作成しています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Notification\DiscordNotificationService.cs.md)_
+- **[通知機能]** 4. **通知イベントの処理**: 通知がクリックされたときなどのイベント処理がありません。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Notification\UwpNotificationService.cs.md)_
+- **[通知機能]** 1. **エラー処理の欠如**: 通知表示時に発生する可能性のある例外に対する処理がありません。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Notification\UwpNotificationService.cs.md)_
+- **[通知機能]** 2. **通知オプションの制限**: タイトルとメッセージ以外の通知オプション（アクション、画像、優先度など）が提供されていません。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Notification\UwpNotificationService.cs.md)_
+- **[通知機能]** 3. **通知IDの不足**: 通知を識別するIDがないため、通知の更新や削除ができません。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Notification\UwpNotificationService.cs.md)_
+- **[通知機能]** 5. **テスト容易性の低さ**: 静的クラスであるため、テスト時にモック化が困難です。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Notification\UwpNotificationService.cs.md)_
+
+## 改善提案一覧
+
+- **[Aura機能]** - *" + AuraMessagePattern)] _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Aura\NewAuraDetectionService.cs.md)_
+- **[Aura機能]** 6. **インターフェースの導入**: テスト容易性を向上させるためのインターフェースを導入します。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Aura\NewAuraDetectionService.cs.md)_
+- **[Aura機能]** 5. **正規表現の構成要素分割**: 正規表現を構成要素に分割し、メンテナンス性を向上させます。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Aura\NewAuraDetectionService.cs.md)_
+- **[Aura機能]** 4. **ログレベルの導入**: デバッグログの出力を設定で制御できるようにします。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Aura\NewAuraDetectionService.cs.md)_
+- **[Aura機能]** 3. **例外処理の追加**: `int.Parse`の例外をキャッチし、適切に処理します。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Aura\NewAuraDetectionService.cs.md)_
+- **[Aura機能]** 2. **リソース管理の改善**: `IDisposable`インターフェースを実装し、イベントハンドラの解除を行います。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Aura\NewAuraDetectionService.cs.md)_
+- **[Aura機能]** 1. **デフォルトイベントハンドラの削除**: イベント宣言を単純化し、null検証を追加します。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Aura\NewAuraDetectionService.cs.md)_
+- **[GitHub設定]** - ui-expert _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.github\review-config.yml.md)_
+- **[GitHub設定]** - draft _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.github\review-config.yml.md)_
+- **[GitHub設定]** - [WIP] _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.github\review-config.yml.md)_
+- **[GitHub設定]** - LunaRabbit66 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.github\review-config.yml.md)_
+- **[GitHub設定]** - book000 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.github\review-config.yml.md)_
+- **[GitHub設定]** - LunaRabbit66 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.github\review-config.yml.md)_
+- **[GitHub設定]** - LunaRabbit66 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.github\review-config.yml.md)_
+- **[GitHub設定]** - ui-expert _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.github\review-config.yml.md)_
+- **[GitHub設定]** - core-expert _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.github\review-config.yml.md)_
+- **[GitHub設定]** - wip _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.github\review-config.yml.md)_
+- **[GitHub設定]** - book000 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.github\review-config.yml.md)_
+- **[GitHub設定]** - ui-reviewer1 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.github\review-config.yml.md)_
+- **[GitHub設定]** - book000 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.github\review-config.yml.md)_
+- **[GitHub設定]** - book000 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.github\review-config.yml.md)_
+- **[GitHub設定]** - LunaRabbit66 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.github\review-config.yml.md)_
+- **[GitHub設定]** - book000 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.github\review-config.yml.md)_
+- **[GitHub設定]** - backend-reviewer1 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.github\review-config.yml.md)_
+- **[GitHub設定]** 4. **レビュアーグループの使用**: 特定の部分に詳しいレビュアーのグループを定義できます。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.github\review-config.yml.md)_
+- **[GitHub設定]** 3. **ファイルパスに基づいたレビュアーの割り当て**: 変更されたファイルのパスに応じて、異なるレビュアーを割り当てることができます。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.github\review-config.yml.md)_
+- **[GitHub設定]** 2. **特定キーワードによるスキップ**: WIPやドラフトなど、特定のキーワードを含むプルリクエストに対してはレビュアーを割り当てないようにできます。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.github\review-config.yml.md)_
+- **[GitHub設定]** 1. **レビュアー数の制限**: 割り当てるレビュアーの数を指定することで、すべてのレビュアーではなく一部のみを割り当てることができます。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.github\review-config.yml.md)_
+- **[GitHub設定]** - LunaRabbit66 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.github\review-config.yml.md)_
+- **[GitHub設定]** - name: Run tests _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.github\workflows\ci.yml.md)_
+- **[GitHub設定]** 5. **コードカバレッジの追加**: テストのコードカバレッジを測定し、レポートを生成するステップを追加できます。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.github\workflows\ci.yml.md)_
+- **[GitHub設定]** - name: Cache NuGet packages _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.github\workflows\ci.yml.md)_
+- **[GitHub設定]** -
+``` _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.github\workflows\ci.yml.md)_
+- **[GitHub設定]** - name: Run security scan _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.github\workflows\ci.yml.md)_
+- **[GitHub設定]** - name: Generate code coverage _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.github\workflows\ci.yml.md)_
+- **[GitHub設定]** - name: Upload coverage to Codecov _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.github\workflows\ci.yml.md)_
+- **[GitHub設定]** 3. **マトリックスビルド**: 複数の.NETバージョンやOSでのテストを追加することで、互換性を確保できます。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.github\workflows\ci.yml.md)_
+- **[GitHub設定]** 4. **依存関係の脆弱性スキャン**: セキュリティスキャンを追加して、依存関係の脆弱性を検出できます。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.github\workflows\ci.yml.md)_
+- **[GitHub設定]** 1. **テストの追加**: ユニットテストやインテグレーションテストを実行するステップを追加すると、コードの品質保証が向上します。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.github\workflows\ci.yml.md)_
+- **[GitHub設定]** 2. **キャッシュの活用**: 依存関係のキャッシュを活用して、ビルド時間を短縮できます。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.github\workflows\ci.yml.md)_
+- **[GitHub設定]** - name: Generate detailed release notes _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.github\workflows\release.yml.md)_
+- **[GitHub設定]** - name: Verify version update _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.github\workflows\release.yml.md)_
+- **[GitHub設定]** 1. **バージョン検証**: バージョン更新前後の検証ステップを追加することで、予期せぬエラーを防止できます。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.github\workflows\release.yml.md)_
+- **[GitHub設定]** 2. **リリースノート改善**: 変更ログからより詳細なリリースノートを生成するステップを追加できます。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.github\workflows\release.yml.md)_
+- **[GitHub設定]** - core-team _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.github\workflows\review.yml.md)_
+- **[GitHub設定]** - uses: kentaro-m/auto-assign-action@v2.0.0 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.github\workflows\review.yml.md)_
+- **[GitHub設定]** - name: Notify on Discord _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.github\workflows\review.yml.md)_
+- **[GitHub設定]** - ui-reviewer2 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.github\workflows\review.yml.md)_
+- **[GitHub設定]** - ui-reviewer1 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.github\workflows\review.yml.md)_
+- **[GitHub設定]** - draft _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.github\workflows\review.yml.md)_
+- **[GitHub設定]** - book000 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.github\workflows\review.yml.md)_
+- **[GitHub設定]** 1. **トリガーの拡張**: 追加のイベントタイプを含めることで、より多くのシナリオでレビュアーを割り当てることができます。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.github\workflows\review.yml.md)_
+- **[GitHub設定]** 2. **レビュアー設定のカスタマイズ**: より詳細なレビュアー割り当てルールを設定することを検討できます。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.github\workflows\review.yml.md)_
+- **[GitHub設定]** 3. **レビュー割り当て後の通知**: レビュー割り当て後にチャットツール（SlackやDiscord）などへの通知を追加することで、レビュープロセスを効率化できます。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.github\workflows\review.yml.md)_
+- **[GitHub設定]** - LunaRabbit66 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.github\workflows\review.yml.md)_
+- **[GitHub設定]** - book000 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.github\workflows\review.yml.md)_
+- **[GitHub設定]** - wip _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.github\workflows\review.yml.md)_
+- **[GitHub設定]** - ui-team _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.github\workflows\review.yml.md)_
+- **[GitHub設定]** - LunaRabbit66 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.github\workflows\review.yml.md)_
+- **[Git設定]** 1. **環境設定ファイル**: _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.gitignore.md)_
+- **[Git設定]** 2. **デバッグ・プロファイリング**: _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.gitignore.md)_
+- **[Git設定]** 3. **パッケージ管理**: _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.gitignore.md)_
+- **[VS Code設定]** 1. **言語固有の設定の追加**: 他の言語やファイルタイプがプロジェクトで使用されている場合、それらの設定も追加するとよいでしょう。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.vscode\settings.json.md)_
+- **[VS Code設定]** 2. **Linting 設定の追加**: コード品質を向上させるため、linting 設定を追加することを検討してください。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.vscode\settings.json.md)_
+- **[VS Code設定]** 3. **ファイルの除外設定**: パフォーマンス向上のために、検索や監視から除外すべきファイルパターンを設定することを検討してください。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\.vscode\settings.json.md)_
+- **[アプリケーション設定]** 3. **デバッグ情報の設定**: メインアプリケーションと同様に、デバッグ情報を埋め込む設定を追加することを検討できます。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier.Updater\Properties\PublishProfiles\Publish.pubxml.md)_
+- **[アプリケーション設定]** 2. **シングルファイル発行**: アップデーターを単一の実行ファイルとして配布するために、シングルファイル発行を検討できます。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier.Updater\Properties\PublishProfiles\Publish.pubxml.md)_
+- **[アプリケーション設定]** - アップデーターの発行設定 - メインアプリケーションと統一される必要があります --> _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier.Updater\Properties\PublishProfiles\Publish.pubxml.md)_
+- **[アプリケーション設定]** - プロジェクト固有の設定 --> _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier.Updater\Properties\PublishProfiles\Publish.pubxml.md)_
+- **[アプリケーション設定]** - 各プロジェクトの発行プロファイル --> _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier.Updater\Properties\PublishProfiles\Publish.pubxml.md)_
+- **[アプリケーション設定]** - Directory.Build.props --> _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier.Updater\Properties\PublishProfiles\Publish.pubxml.md)_
+- **[アプリケーション設定]** 1. **トリミングの検討**: アップデーターのサイズを小さくするために、`PublishTrimmed` を有効にすることを検討できます。特にアップデーターは機能が限定されているため、トリミングの恩恵を受けやすいでしょう。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier.Updater\Properties\PublishProfiles\Publish.pubxml.md)_
+- **[アプリケーション設定]** - ...existing properties... --> _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier.Updater\Properties\PublishProfiles\Publish.pubxml.md)_
+- **[アプリケーション設定]** - ...existing properties... --> _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier.Updater\Properties\PublishProfiles\Publish.pubxml.md)_
+- **[アプリケーション設定]** - ...existing properties... --> _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier.Updater\Properties\PublishProfiles\Publish.pubxml.md)_
+- **[アプリケーション設定]** 5. **説明的なコメント追加**: 設定の目的や意図を明確にするために、コメントを追加することを検討できます。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier.Updater\Properties\PublishProfiles\Publish.pubxml.md)_
+- **[アプリケーション設定]** 4. **メインアプリケーションとの統一**: メインアプリケーションの発行プロファイルと設定を統一するために、共通のインポート設定を使用することを検討できます。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier.Updater\Properties\PublishProfiles\Publish.pubxml.md)_
+- **[アプリケーション設定]** - その他の共通設定 --> _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier.Updater\Properties\PublishProfiles\Publish.pubxml.md)_
+- **[アプリケーション設定]** - リリース構成でビルド --> _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier.Updater\Properties\PublishProfiles\Publish.pubxml.md)_
+- **[アプリケーション設定]** - ...他の設定とコメント... --> _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier.Updater\Properties\PublishProfiles\Publish.pubxml.md)_
+- **[アプリケーション設定]** 2. **環境変数の追加**: 必要に応じて環境変数を定義することも検討してください。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Properties\launchSettings.json.md)_
+- **[アプリケーション設定]** 3. **その他の設定オプション**: 必要に応じて追加の設定を検討できます： _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Properties\launchSettings.json.md)_
+- **[アプリケーション設定]** 1. **複数プロファイルの追加**: 異なる起動設定を持つ複数のプロファイルを定義すると便利かもしれません。例えば： _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Properties\launchSettings.json.md)_
+- **[アプリケーション設定]** - ...existing properties... --> _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Properties\PublishProfiles\Publish.pubxml.md)_
+- **[アプリケーション設定]** - プロジェクト固有の設定 --> _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Properties\PublishProfiles\Publish.pubxml.md)_
+- **[アプリケーション設定]** - 各プロジェクトの発行プロファイル --> _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Properties\PublishProfiles\Publish.pubxml.md)_
+- **[アプリケーション設定]** - その他の共通設定 --> _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Properties\PublishProfiles\Publish.pubxml.md)_
+- **[アプリケーション設定]** - Directory.Build.props --> _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Properties\PublishProfiles\Publish.pubxml.md)_
+- **[アプリケーション設定]** - ...existing properties... --> _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Properties\PublishProfiles\Publish.pubxml.md)_
+- **[アプリケーション設定]** - ...existing properties... --> _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Properties\PublishProfiles\Publish.pubxml.md)_
+- **[アプリケーション設定]** - ...existing properties... --> _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Properties\PublishProfiles\Publish.pubxml.md)_
+- **[アプリケーション設定]** 5. **バージョニング情報の追加**: 発行プロファイルにバージョン情報を含めることで、ビルドプロセスでの一貫性を確保できます。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Properties\PublishProfiles\Publish.pubxml.md)_
+- **[アプリケーション設定]** 4. **発行設定の統一**: メインアプリケーションとアップデーターで設定を統一するために、共通のインポート設定を使用することを検討できます。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Properties\PublishProfiles\Publish.pubxml.md)_
+- **[アプリケーション設定]** 2. **ReadyToRunの検討**: 起動時間を短縮するために、`PublishReadyToRun` を有効にすることを検討できます。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Properties\PublishProfiles\Publish.pubxml.md)_
+- **[アプリケーション設定]** 1. **トリミングの検討**: アプリケーションサイズを小さくするために、`PublishTrimmed` を有効にすることを検討できます。ただし、リフレクションを使用する部分がある場合は注意が必要です。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Properties\PublishProfiles\Publish.pubxml.md)_
+- **[アプリケーション設定]** 3. **圧縮の検討**: 配布サイズをさらに小さくするために、シングルファイル発行と圧縮を検討できます。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Properties\PublishProfiles\Publish.pubxml.md)_
+- **[アプリケーション設定]** 1. **リソース使用方法の最適化**: リソースの使用に関するヘルパーメソッドを別のユーティリティクラスで提供することを検討できます。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Properties\Resources.Designer.cs.md)_
+- **[アプリケーション設定]** 2. **国際化対応**: 現状ではあまり活用されていませんが、`Culture` プロパティを使って多言語対応を実装することができます。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Properties\Resources.Designer.cs.md)_
+- **[アプリケーション設定]** 1. **リソースの整理**: 将来的にリソースが増えた場合、カテゴリ別にリソースファイルを分割することも検討できます。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Properties\Resources.resx.md)_
+- **[アプリケーション設定]** 2. **国際化対応**: 現在、アプリケーションは多言語対応していないようです。テキストリソースを追加し、国際化を検討できます。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Properties\Resources.resx.md)_
+- **[アプリケーション設定]** 3. **リソースの最適化**: バイナリデータ（Auras.json）は、実行時に効率的に処理できるよう、最適化を検討できます。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Properties\Resources.resx.md)_
+- **[アプリケーション設定]** - Resources.resx に言語リソースを追加 --> _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Properties\Resources.resx.md)_
+- **[その他]** 5. **グローバルな状態**: 静的クラスや静的メソッドへの依存が多く、副作用の制御が困難です。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\project.md)_
+- **[その他]** 4. **テスト不足**: 単体テストやインテグレーションテストが実装されていません。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\project.md)_
+- **[その他]** 2. **リソース管理**: `IDisposable`の実装が不十分であり、リソースリークの可能性があります。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\project.md)_
+- **[その他]** 1. **依存性管理**: 多くのクラスでハードコードされた依存関係が存在し、テスト容易性と拡張性が低下しています。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\project.md)_
+- **[その他]** 3. **非同期プログラミング**: 非同期メソッドの使用に一貫性がなく、デッドロックの可能性があります。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\project.md)_
+- **[ユーザーインターフェース]** 1. **アクセシビリティ向上**: コントロールにアクセシビリティのための追加情報を提供することを検討できます。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\UI\Settings\SettingsForm.Designer.cs.md)_
+- **[ユーザーインターフェース]** 2. **レイアウト改善**: フォームのレイアウトをより洗練させるために、パネルやグループボックスを使用することを検討できます。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\UI\Settings\SettingsForm.Designer.cs.md)_
+- **[ユーザーインターフェース]** 3. **入力検証**: 入力フィールドに基本的な検証を追加することを検討できます。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\UI\Settings\SettingsForm.Designer.cs.md)_
+- **[ユーザーインターフェース]** 4. **ダークモード対応**: システムのダークモード設定に対応するよう、フォームのスタイルを調整することを検討できます。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\UI\Settings\SettingsForm.Designer.cs.md)_
+- **[ユーザーインターフェース]** 3. **ローカライズ対応**: 将来的に多言語対応が必要になる場合に備えて、フォーム上のテキストをリソースファイルに分離することを検討できます。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\UI\Settings\SettingsForm.resx.md)_
+- **[ユーザーインターフェース]** - アイコンデータ --> _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\UI\Settings\SettingsForm.resx.md)_
+- **[ユーザーインターフェース]** - Properties/Resources.resx に移動して共有 --> _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\UI\Settings\SettingsForm.resx.md)_
+- **[ユーザーインターフェース]** 2. **共有リソースの活用**: 複数のフォームで同じアイコンやリソースを使用する場合、プロジェクト全体で共有するためにアプリケーションレベルのリソースファイル（`Properties/Resources.resx`）に移動することを検討できます。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\UI\Settings\SettingsForm.resx.md)_
+- **[ユーザーインターフェース]** 1. **リソースの最適化**: フォームに埋め込まれたアイコンなどのバイナリリソースのサイズを最適化することを検討できます。特に大きなアイコンや画像を使用している場合、適切なサイズに縮小することでアプリケーションの全体サイズを削減できます。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\UI\Settings\SettingsForm.resx.md)_
+- **[ユーザーインターフェース]** - 例: 文字列リソースの追加 --> _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\UI\Settings\SettingsForm.resx.md)_
+- **[ライセンス]** 1. **最新のライセンスバージョンの確認**: 使用しているライセンスが最新バージョンであるか確認することをお勧めします。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\LICENSE.md)_
+- **[ライセンス]** 2. **年度と著作権者の更新**: ライセンスの著作権表示に、最新の年度と正確な著作権者（個人名または組織名）が記載されていることを確認してください。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\LICENSE.md)_
+- **[ライセンス]** 3. **README.mdへの言及**: プロジェクトのREADME.mdファイル内でライセンスについて簡潔に言及し、LICENSEファイルへのリンクを提供することをお勧めします。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\LICENSE.md)_
+- **[リソース]** 4. **ダークモード対応**: ダークモード用の別バージョンのアイコンを用意することで、システムのテーマ設定に応じた最適な表示を実現できます。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Resources\AppIcon.ico.md)_
+- **[リソース]** 3. **アプリケーションテーマとの一貫性**: アプリケーションのカラーテーマやブランディングと一貫性のあるデザインに更新することを検討できます。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Resources\AppIcon.ico.md)_
+- **[リソース]** 1. **最新のデザインガイドラインへの対応**: 最新のWindows 11デザインガイドラインに沿ったアイコンデザインの更新を検討できます。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Resources\AppIcon.ico.md)_
+- **[リソース]** 2. **多様なアイコンサイズの追加**: より多くのサイズバリエーション（特に高解像度ディスプレイ向けの大きなサイズ）を追加することで、様々な表示環境での見た目を向上させることができます。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Resources\AppIcon.ico.md)_
+- **[リソース]** 4. **ローカライズ**: 将来の国際化に備えて、名前やサブテキストをローカライズ可能な構造にすることを検討しましょう。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Resources\Auras.json.md)_
+- **[リソース]** 3. **カテゴリ分類**: Aura をカテゴリーやグループで分類することで、管理や表示が容易になる可能性があります。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Resources\Auras.json.md)_
+- **[リソース]** 2. **ドキュメント化**: 各フィールドの意味、特に `Rarity` と `Tier` の関係性についての説明を追加すると良いでしょう。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Resources\Auras.json.md)_
+- **[リソース]** 1. **スキーマバリデーション**: JSON スキーマを定義して、データの妥当性を検証する仕組みを追加すると良いでしょう。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Resources\Auras.json.md)_
+- **[依存関係管理]** 3. **設定の詳細化**: プロジェクト固有のニーズに合わせて、より詳細な設定を検討できます。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\renovate.json.md)_
+- **[依存関係管理]** 2. **コメントやドキュメント**: JSON ファイルはコメントをサポートしていませんが、README.md などに Renovate の設定に関する説明を追加すると良いでしょう。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\renovate.json.md)_
+- **[依存関係管理]** 1. **インライン設定の追加**: プロジェクト固有の設定を追加することで、より詳細な制御が可能になります。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\renovate.json.md)_
+- **[更新機能]** - アップデーターを起動した後、`Application.Exit()`を呼び出していますが、これは適切にリソースを解放しない可能性があります _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Updater\UpdateChecker.cs.md)_
+- **[更新機能]** 1. **依存関係の注入** _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Updater\UpdateChecker.cs.md)_
+- **[更新機能]** 2. **静的メソッドの多用** _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Updater\UpdateChecker.cs.md)_
+- **[更新機能]** 3. **エラーハンドリングと報告** _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Updater\UpdateChecker.cs.md)_
+- **[更新機能]** 4. **アプリケーション終了の処理** _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Updater\UpdateChecker.cs.md)_
+- **[更新機能]** - これにより、悪意のあるアップデートが実行される可能性があります _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Updater\UpdateChecker.cs.md)_
+- **[更新機能]** - ダウンロードしたアップデートファイルの整合性や署名の検証が行われていません _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Updater\UpdateChecker.cs.md)_
+- **[更新機能]** 5. **セキュリティ考慮事項** _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Updater\UpdateChecker.cs.md)_
+- **[更新機能]** - コンストラクタで`GitHubReleaseService`を受け取っていますが、静的メソッド`CheckAsync`内で新しいインスタンスを作成しています _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Updater\UpdateChecker.cs.md)_
+- **[更新機能]** - これにより、テスト時にモックオブジェクトを使用することが困難になっています _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Updater\UpdateChecker.cs.md)_
+- **[更新機能]** - `CheckAsync`が静的メソッドとして実装されており、インスタンスメソッドと一貫性がありません _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Updater\UpdateChecker.cs.md)_
+- **[更新機能]** - これにより、クラスの使用パターンが混在し、コードの理解と保守が困難になる可能性があります _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Updater\UpdateChecker.cs.md)_
+- **[更新機能]** - エラーメッセージがコンソールに出力されていますが、システムトレイアプリケーションではユーザーに見えません _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Updater\UpdateChecker.cs.md)_
+- **[更新機能]** - より適切なエラー報告メカニズム（例：イベント、ログファイル、通知）を実装すべきです _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Updater\UpdateChecker.cs.md)_
+- **[更新機能]** - `Application.Exit()`の代わりに、正しくリソースを解放してから終了するメカニズムを検討すべきです _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Updater\UpdateChecker.cs.md)_
+- **[構成管理]** 2. **キャッシュの導入**: 設定の頻繁な読み込みを避けるためにキャッシュを導入します。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Config\AppConfig.cs.md)_
+- **[構成管理]** 1. **インスタンスベースの設計**: 静的クラスではなく、インスタンスベースの設計に変更します。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Config\AppConfig.cs.md)_
+- **[構成管理]** 5. **URL検証の強化**: より堅牢なURL検証を導入します。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Config\AppConfig.cs.md)_
+- **[構成管理]** - _lastLoadTime > _cacheTimeout) _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Config\AppConfig.cs.md)_
+- **[構成管理]** - _lastLoadTime > _cacheTimeout) _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Config\AppConfig.cs.md)_
+- **[構成管理]** 3. **例外処理の強化**: JSON読み込み時の例外処理を強化します。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Config\AppConfig.cs.md)_
+- **[構成管理]** 4. **設定変更通知の追加**: 設定変更時にイベントを発火するメカニズムを追加します。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Config\AppConfig.cs.md)_
+- **[構成管理]** 1. **バリデーション機能**: プロパティに値が設定される際のバリデーションを追加することで、不正な値が設定されることを防げます。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Config\ConfigData.cs.md)_
+- **[構成管理]** 2. **オプショナル設定**: 設定が存在しない場合のデフォルト値を指定する機能を追加できます。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Config\ConfigData.cs.md)_
+- **[構成管理]** 3. **設定バージョン管理**: 将来的な設定形式の変更に備えて、バージョン番号を追加することを検討できます。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Config\ConfigData.cs.md)_
+- **[構成管理]** 4. **コンストラクタの追加**: 設定オブジェクトを作成するための便利なコンストラクタを追加することができます。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Config\ConfigData.cs.md)_
+- **[通知機能]** 1. **エラー処理の追加**: Discord APIリクエスト時の例外をキャッチして適切に処理します。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Notification\DiscordNotificationService.cs.md)_
+- **[通知機能]** 2. **依存性注入の導入**: 設定を外部から注入できるようにします。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Notification\DiscordNotificationService.cs.md)_
+- **[通知機能]** 4. **インターフェースの導入**: テスト容易性のためにインターフェースを導入します。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Notification\DiscordNotificationService.cs.md)_
+- **[通知機能]** 5. **Webhookクライアントの再利用**: シングルトンパターンでWebhookクライアントを再利用します。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Notification\DiscordNotificationService.cs.md)_
+- **[通知機能]** 3. **色のカスタマイズ**: 通知の色をカスタマイズできるようにします。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Notification\DiscordNotificationService.cs.md)_
+- **[通知機能]** 1. **エラー処理の追加**: 通知表示時のエラーをキャッチして適切に処理します。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Notification\UwpNotificationService.cs.md)_
+- **[通知機能]** 2. **通知オプションの拡張**: より柔軟な通知設定を可能にします。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Notification\UwpNotificationService.cs.md)_
+- **[通知機能]** 3. **通知IDの導入**: 通知を識別するためのIDを導入します。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Notification\UwpNotificationService.cs.md)_
+- **[通知機能]** 4. **通知イベントの処理**: 通知のクリックなどのイベントを処理します。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Notification\UwpNotificationService.cs.md)_
+- **[通知機能]** 5. **インターフェースの導入**: テスト容易性のためにインターフェースを導入します。 _(S:\Git\CSharpProjects\RNGNewAuraNotifier\reviews\results\RNGNewAuraNotifier\Core\Notification\UwpNotificationService.cs.md)_
+

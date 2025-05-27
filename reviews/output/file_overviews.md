@@ -1,0 +1,3 @@
+# RNGNewAuraNotifier プロジェクトのファイル概要
+
+

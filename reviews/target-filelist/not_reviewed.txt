@@ -1,0 +1,9 @@
+s:\Git\CSharpProjects\RNGNewAuraNotifier\LICENSE
+s:\Git\CSharpProjects\RNGNewAuraNotifier\RNGNewAuraNotifier.Updater\Properties\PublishProfiles\Publish.pubxml
+s:\Git\CSharpProjects\RNGNewAuraNotifier\RNGNewAuraNotifier\Core\Config\ConfigData.cs
+s:\Git\CSharpProjects\RNGNewAuraNotifier\RNGNewAuraNotifier\Properties\PublishProfiles\Publish.pubxml
+s:\Git\CSharpProjects\RNGNewAuraNotifier\RNGNewAuraNotifier\Properties\Resources.Designer.cs
+s:\Git\CSharpProjects\RNGNewAuraNotifier\RNGNewAuraNotifier\Properties\Resources.resx
+s:\Git\CSharpProjects\RNGNewAuraNotifier\RNGNewAuraNotifier\Resources\AppIcon.ico
+s:\Git\CSharpProjects\RNGNewAuraNotifier\RNGNewAuraNotifier\UI\Settings\SettingsForm.Designer.cs
+s:\Git\CSharpProjects\RNGNewAuraNotifier\RNGNewAuraNotifier\UI\Settings\SettingsForm.resx
